@@ -1,4 +1,4 @@
-peers-ffwp
-==========
+#peers-ffwp
+#==========
 
-gluon fastd peers for Freifunk Westpfalz
+#gluon fastd peers for Freifunk Westpfalz
