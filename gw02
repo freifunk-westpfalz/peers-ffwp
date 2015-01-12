@@ -1,3 +1,2 @@
 key "444c83f025e98971a02502acc681fd8139c13ad5bf404eb0a88861f2509a3404";
-#remote "gw02.freifunk-westpfalz.de" port 10000;
-remote "5.9.51.88" port 10000;
+remote "gw02.freifunk-westpfalz.de" port 10000;
