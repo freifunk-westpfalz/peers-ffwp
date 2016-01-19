@@ -3,10 +3,10 @@
 language: c
 
 before_install:
- - echo "deb http://repo.universe-factory.net/debian/ sid main" | sudo tee -a /etc/apt/sources.list
- - echo "deb http://http.debian.net/debian wheezy-backports main" | sudo tee -a /etc/apt/sources.list
- - sudo apt-get update
- - sudo apt-get install --force-yes fastd
+ - wget -O/tmp/libsodium13_1.0.3-1~wheezy0_i386.deb http://freifunk-pirmasens.de/libsodium13_1.0.3-1~wheezy0_i386.deb && dpkg -i /tmp/libsodium13_1.0.3-1~wheezy0_i386.deb
+ - wget -O/tmp/libjson-c2_0.11-3~bpo7+1_i386.deb http://freifunk-pirmasens.de/libjson-c2_0.11-3~bpo7+1_i386.deb && dpkg -i /tmp/libjson-c2_0.11-3~bpo7+1_i386.deb
+ - wget -O/tmp/libuecc0_6-0uf1_i386.deb http://freifunk-pirmasens.de/libuecc0_6-0uf1_i386.deb && dpkg -i /tmp/libuecc0_6-0uf1_i386.deb
+ - wget -O/tmp/fastd-dbg_17-4_i386.deb http://freifunk-pirmasens.de/fastd-dbg_17-4_i386.deb && dpkg -i /tmp/fastd-dbg_17-4_i386.deb
 
 script:
  - for f in * ; do echo "checking $f..."; fastd --verify-config --config-peer $f || exit 1; done
