@@ -11,7 +11,8 @@ before_install:
  - wget -O/tmp/fastd-repo/fastd_17-4_i386.deb http://freifunk-pirmasens.de/fastd_17-4_i386.deb
  - cd /tmp/fastd-repo/ && dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
  - echo "deb file:/tmp/fastd-repo/ ./" | sudo tee -a /etc/apt/sources.list.d/fastd.list
- - sudo apt-get install fastd
+ - sudo apt-get update
+ - sudo apt-get -y --force-yes install fastd
 
 script:
  - for f in * ; do echo "checking $f..."; fastd --verify-config --config-peer $f || exit 1; done
