@@ -4,6 +4,7 @@ language: c
 sudo: required
 
 before_install:
+ - wget -Olibc6_2.13-38+deb7u8_i386.deb http://freifunk-pirmasens.de/libc6_2.13-38+deb7u8_i386.deb && sudo dpkg -i libc6_2.13-38+deb7u8_i386.deb
  - wget -Olibsodium13_1.0.3-1~wheezy0_i386.deb http://freifunk-pirmasens.de/libsodium13_1.0.3-1~wheezy0_i386.deb && sudo dpkg -i libsodium13_1.0.3-1~wheezy0_i386.deb
  - wget -Olibjson-c2_0.11-3~bpo7+1_i386.deb http://freifunk-pirmasens.de/libjson-c2_0.11-3~bpo7+1_i386.deb && sudo dpkg -i libjson-c2_0.11-3~bpo7+1_i386.deb
  - wget -Olibuecc0_6-0uf1_i386.deb http://freifunk-pirmasens.de/libuecc0_6-0uf1_i386.deb && sudo dpkg -i libuecc0_6-0uf1_i386.deb
