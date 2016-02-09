@@ -1,0 +1,2 @@
+key "72261e45e68b3a5aa0f8919bb5a581899d122f4219858673435a8df6277ba9c0";
+remote "service01.freifunk-westpfalz.de" port 10105;
